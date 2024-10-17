@@ -99,4 +99,5 @@ public:
     virtual void GetBackgroundPreview(struct HBITMAP__ * *)() = 0;
     virtual void Copy(struct ITheme * *)() = 0;
     virtual void SetThemeColor(unsigned short const *,unsigned long)() = 0;
+    virtual void GetThumbnailSlideshowSettings(struct ISlideshowSettings * *)() = 0;
 };
