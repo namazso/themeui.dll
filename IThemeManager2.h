@@ -60,6 +60,7 @@ public:
     virtual void get_RSSFeed(unsigned short * *)() = 0;
     virtual void IsSlideshowEnabled(int *)() = 0;
     virtual void GetSlideshowSettingsWithoutFiles(struct ISlideshowSettings * *)() = 0;
+    virtual void GetThumbnailSlideshowSettings(struct ISlideshowSettings * *)() = 0;
     virtual void GetPath(short,unsigned short * *)() = 0;
     virtual void SetPath(unsigned short *)() = 0;
     virtual void GetCursor(unsigned short *,unsigned short * *)() = 0;
@@ -99,5 +100,4 @@ public:
     virtual void GetBackgroundPreview(struct HBITMAP__ * *)() = 0;
     virtual void Copy(struct ITheme * *)() = 0;
     virtual void SetThemeColor(unsigned short const *,unsigned long)() = 0;
-    virtual void GetThumbnailSlideshowSettings(struct ISlideshowSettings * *)() = 0;
 };
