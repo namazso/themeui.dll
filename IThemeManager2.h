@@ -30,8 +30,6 @@ class ITheme : public IUnknown {
 public:
     virtual void get_DisplayName(unsigned short * *)() = 0;
     virtual void put_DisplayName(unsigned short *)() = 0;
-    virtual void get_ScreenSaver(unsigned short * *)() = 0;
-    virtual void put_ScreenSaver(unsigned short *)() = 0;
     virtual void get_VisualStyle(unsigned short * *)() = 0;
     virtual void put_VisualStyle(unsigned short *)() = 0;
     virtual void get_VisualStyleColor(unsigned short * *)() = 0;
@@ -92,6 +90,7 @@ public:
     virtual void GetBrandLogo(unsigned short * *)() = 0;
     virtual void SetBrandLogo(unsigned short *)() = 0;
     virtual void ClearBrandLogo(void)() = 0;
+    virtual void ClearScreenSaver(void)() = 0;
     virtual void GetScreenSaverName(unsigned short * *)() = 0;
     virtual void GetBackgroundPreview(struct HBITMAP__ * *)() = 0;
     virtual void Copy(struct ITheme * *)() = 0;
