@@ -42,6 +42,10 @@ public:
     virtual void put_ColorizationColor(unsigned long)() = 0;
     virtual void get_ThemeId(struct _GUID *)() = 0;
     virtual void put_ThemeId(struct _GUID const &)() = 0;
+    virtual void get_AppMode(int *)() = 0;
+    virtual void put_AppMode(int)() = 0;
+    virtual void get_SystemMode(int *)() = 0;
+    virtual void put_SystemMode(int)() = 0;
     virtual void get_Background(unsigned short * *)() = 0;
     virtual void put_Background(unsigned short *)() = 0;
     virtual void get_BackgroundPosition(enum DESKTOP_WALLPAPER_POSITION *)() = 0;
@@ -95,5 +99,4 @@ public:
     virtual void GetBackgroundPreview(struct HBITMAP__ * *)() = 0;
     virtual void Copy(struct ITheme * *)() = 0;
     virtual void SetThemeColor(unsigned short const *,unsigned long)() = 0;
-    virtual void GetThumbnailSlideshowSettings(struct ISlideshowSettings * *)() = 0;
 };
