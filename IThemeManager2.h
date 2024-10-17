@@ -14,7 +14,7 @@ public:
     virtual void GetDefaultTheme(int *)() = 0;
     virtual void CreateThemePack(struct HWND__ *,unsigned short const *,enum THEMEPACK_FLAGS)() = 0;
     virtual void CloneAndSetCurrentTheme(struct HWND__ *,unsigned short const *,unsigned short * *)() = 0;
-    virtual void InstallThemePack(struct HWND__ *,unsigned short const *,int,enum THEMEPACK_FLAGS,unsigned short * *)() = 0;
+    virtual void InstallThemePack(struct HWND__ *,unsigned short const *,int,enum THEMEPACK_FLAGS,unsigned short * *,struct ITheme * *)() = 0;
     virtual void DeleteTheme(unsigned short const *)() = 0;
     virtual void OpenTheme(struct HWND__ *,unsigned short const *,enum THEMEPACK_FLAGS)() = 0;
     virtual void AddAndSelectTheme(struct HWND__ *,unsigned short const *,enum THEME_APPLY_FLAGS,enum THEMEPACK_FLAGS)() = 0;
@@ -23,6 +23,7 @@ public:
     virtual void ImportRoamingThemeFromStream(struct IStream *,int)() = 0;
     virtual void UpdateColorSettingsForLogonUI(void)() = 0;
     virtual void GetDefaultThemeId(struct _GUID *)() = 0;
+    virtual void UpdateCustomTheme(void)() = 0;
 };
 
 class ITheme : public IUnknown {
@@ -95,5 +96,4 @@ public:
     virtual void GetBackgroundPreview(struct HBITMAP__ * *)() = 0;
     virtual void Copy(struct ITheme * *)() = 0;
     virtual void SetThemeColor(unsigned short const *,unsigned long)() = 0;
-    virtual void GetThumbnailSlideshowSettings(struct ISlideshowSettings * *)() = 0;
 };
